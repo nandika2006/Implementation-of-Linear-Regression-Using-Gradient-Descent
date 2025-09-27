@@ -58,13 +58,13 @@ RegisterNumber: 212224230175
 ## Output:
 <img width="558" height="222" alt="image" src="https://github.com/user-attachments/assets/b3fe417f-9192-4a22-b99d-a835e5f72e0f" />
 
-Value of X
+    Value of X
 <img width="225" height="713" alt="image" src="https://github.com/user-attachments/assets/7e933168-6f3f-4b22-90ee-0238f514717d" />
 
-Value of X1_Scaled
+    Value of X1_Scaled
 <img width="343" height="707" alt="image" src="https://github.com/user-attachments/assets/38ad2e2e-4079-4f9c-b67a-991559b909ac" />
 
-Predicted Value
+    Predicted Value
 <img width="247" height="46" alt="image" src="https://github.com/user-attachments/assets/fd6b5abe-0500-41f0-a817-fdc769589fb2" />
 
 ## Result:
