@@ -1,4 +1,4 @@
-[EXP 2.2 Drawing NANDIKA.pdf](https://github.com/user-attachments/files/22570907/EXP.2.2.Drawing.NANDIKA.pdf)# Implementation-of-Linear-Regression-Using-Gradient-Descent
+# Implementation-of-Linear-Regression-Using-Gradient-Descent
 
 ## AIM:
 To write a program to predict the profit of a city using the linear regression model with gradient descent.
