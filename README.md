@@ -1,4 +1,4 @@
-# Implementation-of-Linear-Regression-Using-Gradient-Descent
+[EXP 2.2 Drawing NANDIKA.pdf](https://github.com/user-attachments/files/22570907/EXP.2.2.Drawing.NANDIKA.pdf)# Implementation-of-Linear-Regression-Using-Gradient-Descent
 
 ## AIM:
 To write a program to predict the profit of a city using the linear regression model with gradient descent.
@@ -18,13 +18,51 @@ To write a program to predict the profit of a city using the linear regression m
 /*
 Program to implement the linear regression using gradient descent.
 Developed by: 
-RegisterNumber:  
+RegisterNumber: 212224230175 
 */
 ```
+    import numpy as np
+    import pandas as pd
+    from sklearn.preprocessing import StandardScaler
+    def linear_regression(X1,y,learning_rate = 0.1, num_iters = 1000):
+        X = np.c_[np.ones(len(X1)),X1]
+        theta = np.zeros(X.shape[1]).reshape(-1,1)
+        
+        for _ in range(num_iters):
+            predictions = (X).dot(theta).reshape(-1,1)
+            errors=(predictions - y ).reshape(-1,1)
+            theta -= learning_rate*(1/len(X1))*X.T.dot(errors)
+        return theta
+    data=pd.read_csv("50_Startups.csv")
+    data.head()
+    X=(data.iloc[1:,:-2].values)
+    X1=X.astype(float)
+    scaler=StandardScaler()
+    y=(data.iloc[1:,-1].values).reshape(-1,1)
+    X1_Scaled=scaler.fit_transform(X1)
+    Y1_Scaled=scaler.fit_transform(y)
+    print(X)
+    print(X1_Scaled)
+    theta= linear_regression(X1_Scaled,Y1_Scaled)
+    new_data=np.array([165349.2,136897.8,471784.1]).reshape(-1,1)
+    new_Scaled=scaler.fit_transform(new_data)
+    prediction=np.dot(np.append(1,new_Scaled),theta)
+    prediction=prediction.reshape(-1,1)
+    pre=scaler.inverse_transform(prediction)
+    print(prediction)
+    print(f"Predicted value: {pre}")
 
 ## Output:
-![linear regression using gradient descent](sam.png)
+<img width="558" height="222" alt="image" src="https://github.com/user-attachments/assets/b3fe417f-9192-4a22-b99d-a835e5f72e0f" />
 
+Value of X
+<img width="225" height="713" alt="image" src="https://github.com/user-attachments/assets/7e933168-6f3f-4b22-90ee-0238f514717d" />
+
+Value of X1_Scaled
+<img width="343" height="707" alt="image" src="https://github.com/user-attachments/assets/38ad2e2e-4079-4f9c-b67a-991559b909ac" />
+
+Predicted Value
+<img width="247" height="46" alt="image" src="https://github.com/user-attachments/assets/fd6b5abe-0500-41f0-a817-fdc769589fb2" />
 
 ## Result:
 Thus the program to implement the linear regression using gradient descent is written and verified using python programming.
